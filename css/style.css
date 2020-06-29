@@ -1,8 +1,12 @@
 :root {
   --ft_bg: #eee;
-  --red: #BF0000;
-  --dark: #3C3D36;
-  --lightgray: rgba(0,0,0,.15);
+  --red: #FF3465;
+  --lightred: hsla(346, 100%, 65%, 1);
+  --darkred: hsla(346, 100%, 44%, 1);
+  --dark: #495867;
+  --bluishmid: #5D799D;
+  --highlight: #bdd5ea;
+  --light: #f7f7ff;
   --tablet_w: 768px;
   --mobile_w: 320px; }
 
@@ -11,15 +15,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: all .35s; }
+  transition: all .25s; }
 
 body, html {
   min-width: 320px;
-  scroll-behavior: smooth; }
-
-button {
-  border: 0;
-  padding: 0; }
+  scroll-behavior: smooth;
+  color: var(--dark); }
 
 .active {
   border-bottom: 5px solid var(--red);
@@ -36,21 +37,25 @@ a {
   border-radius: 10px; }
 
 .btn {
+  border: none;
   padding: 10px;
   display: inline-block;
   background-color: var(--red);
-  color: #fff; }
+  color: var(--light);
+  cursor: pointer; }
   .btn a {
-    color: #fff; }
+    color: var(--light); }
   .btn:hover {
-    background-color: #de0e0e; }
+    background-color: var(--lightred); }
   .btn:active {
-    background-color: #ab0202; }
+    background-color: var(--darkred); }
 
 .heading-text {
   font-family: 'Nothing You Could Do', cursive;
   font-size: 2rem;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--dark); }
   @media screen and (max-width: 360px) {
     .heading-text {
       font-size: 1.5rem; } }
@@ -124,7 +129,7 @@ a {
           margin-right: 10px; } }
 
 #home {
-  background-image: linear-gradient(90deg, var(--lightgray) 30%, transparent 50%);
+  max-width: 90vw;
   min-height: 90vh;
   display: flex;
   justify-content: space-around;
@@ -134,6 +139,8 @@ a {
       flex-direction: column;
       align-content: center; } }
   #home .home__info {
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15);
+    background-color: var(--light);
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -147,7 +154,8 @@ a {
     #home .home__info .btn {
       margin-top: 20px; }
   #home .home__video {
-    display: flex; }
+    display: flex;
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.15); }
     @media screen and (max-width: 580px) {
       #home .home__video {
         width: 320px;
@@ -164,11 +172,15 @@ a {
   min-width: 280px;
   justify-content: center;
   padding: 20px 0 30px 0;
-  min-height: 30vh;
-  margin: 50px 0; }
+  min-height: 8rem;
+  margin: 50px 0;
+  background: var(--bluishmid);
+  margin-bottom: 0; }
+  .subscribe h2 {
+    margin-bottom: 0;
+    color: var(--light); }
   .subscribe .subscribe__input {
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.25); }
+    padding: 20px; }
   .subscribe input#email {
     margin: 10px;
     padding-left: 10px;
@@ -180,11 +192,8 @@ a {
   display: flex;
   flex-direction: column;
   padding: 60px 0 0 0; }
-  #features .heading-text {
-    margin-bottom: 30px; }
   #features .features__wrap {
     margin: 0 auto;
-    min-height: 90vh;
     max-width: 700px;
     display: grid;
     grid-template-columns: repeat(3, 200px);
@@ -239,10 +248,7 @@ a {
   margin: 50px 0; }
   #order .order__price {
     align-self: center;
-    font-size: 30px;
-    margin-bottom: 30px; }
-  #order .heading-text {
-    margin-bottom: 30px; }
+    font-size: 30px; }
   #order .items__wrap {
     display: flex;
     justify-content: center;
@@ -319,7 +325,7 @@ a {
         margin-top: 7px;
         fill: #fff; }
         #footer .footer__social .item a > svg:hover {
-          fill: #efefef;
+          fill: var(--light);
           border: 1px solid white;
           box-sizing: border-box; }
         @media (max-width: 420px) {
