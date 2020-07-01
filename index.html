@@ -3,8 +3,9 @@
   <head>
     <meta charset="UTF-8">
     <title>Smart Watch</title>
+    <meta name="description" content="Smartwatch. Project for FreeCodeCamp Curriculum">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet preconnect"/>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -17,7 +18,7 @@
         </div>
         <nav id="nav-bar">
           <ul>
-            <li><a href="#header" class="nav-link">home</a></li>
+            <li><a href="#header" class="nav-link active">home</a></li>
             <li><a href="#features" class="nav-link">features</a></li>
             <li><a href="#order" class="nav-link">order</a></li>
           </ul>
@@ -29,10 +30,10 @@
       </div>
     </header>
 
-    <section id="home">
+    <section id="home" class="wp">
       <!-- <div class="home-inner-wrap"> -->
         <div class="home__video">
-          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/RBWywYirukE" frameborder="0" encrypted-media allowfullscreen></iframe>
+          <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/RBWywYirukE" frameborder="0" encrypted-media allowfullscreen title="Honest Smartwatch Commercial"></iframe>
         </div>
         <div class="home__info">
           <h3 class="heading-text">The future is here</h3>
@@ -46,13 +47,13 @@
     <section id="subscribe" class="divider subscribe">
       <h2 class="heading-text">Stay tuned</h2>
       <form class="subscribe__input" id="form" action="https://www.freecodecamp.com/email-submit">
-        <input type="email" id="email" placeholder="Your e-mail" name="email" required>
+        <label>E-mail:<input type="email" id="email" placeholder="Your e-mail" name="email" required></label>
         <input type="submit" id="submit" value="Submit" class="btn">
       </form>
     </section>
 
-    <section id="features">
-      <h2 class="heading-text">Yep, its everything you want</h2>
+    <section id="features" class="wp">
+      <h2 class="heading-text">Yes, its everything you want</h2>
       <div class="features__wrap">
         <div class="feature">
           <img src="https://cdn1.iconfinder.com/data/icons/essentials-pack/96/wifi_wireless_internet_network_signal-512.png" alt="wireless">
@@ -99,48 +100,58 @@
       </div>
     </section>
 
-    <section id="order">
+    <section id="order" class="wp">
       <h2 class="heading-text">Pick your favourite</h2>
       <div class="order__price">It's only <span class="tag">$39.99</span> per item</div>
       <div class="items__wrap">
         <div class="item">
           <img src="http://www.watchpro.com/wp-content/uploads/2016/08/Pebble-2.png" alt="Altarion z5-ex " title="Altarion z5-ex" class="item__img">
-          <span><input  type="number" min="0" max="99" placeholder="0" name = "z5ex"> pcs</span>
+          <span>
+            <label><input  type="number" min="0" max="99" placeholder="0" name = "z5ex"> pcs</label>
+          </span>
         </div>
         <div class="item">
-          <img src="https://i.ebayimg.com/images/g/vAUAAOSw8VFdcAh4/s-l300.png" alt="Fitbit Versa 2" title="Fitbit Versa 2class" class="item__img">
-          <span><input  type="number" min="0" max="99" placeholder="0" name = "msx727"><span> pcs</span>
+          <img src="http://3.15.161.138/wp-content/uploads/2019/11/watch1-ts-256x256.png" alt="Smartwatch" title="Smartwatch" class="item__img">
+          <span>
+            <label><input  type="number" min="0" max="99" placeholder="0" name = "msx727"> pcs</label>
+          </span>
         </div>
         <div class="item">
           <img src="https://s7d2.scene7.com/is/image/atmosphere/332128139_99_a?bgColor=0,0,0,0&fmt=png-alpha&hei=520&resMode=sharp2&op_sharpen=1" alt="Shirp jqk-7" title="Shirp jqk-7" class="item__img">
-          <span><input  type="number" min="0" max="99" placeholder="0" name = "jqk-7"> pcs</span>
+          <span>
+            <label><input  type="number" min="0" max="99" placeholder="0" name = "jqk-7"> pcs</label>
+          </span>
         </div>
       </div>
       <input type="submit" formaction="" value="Order" id="order__submit" class="btn">
     </section>
   <!--   </div> -->
     <footer id="footer">
-      <ul class="footer__social">
+      <div class="footer__social">
         <span wrap="nowrap">Join us @</span>
-        <li class="item">
-          <a href="javascript:void(0);" class="icon facebook" title="Facebook">
-            <svg viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg>
-          </a>
-        </li>
-        <li class="item">
-          <a href="javascript:void(0);" class="icon youtube" title="YouTube">
-            <svg viewBox="0 0 512 512"><path d="M422.6 193.6c-5.3-45.3-23.3-51.6-59-54 -50.8-3.5-164.3-3.5-215.1 0 -35.7 2.4-53.7 8.7-59 54 -4 33.6-4 91.1 0 124.8 5.3 45.3 23.3 51.6 59 54 50.9 3.5 164.3 3.5 215.1 0 35.7-2.4 53.7-8.7 59-54C426.6 284.8 426.6 227.3 422.6 193.6zM222.2 303.4v-94.6l90.7 47.3L222.2 303.4z"/></svg>
-          </a>
-        </li>
-        <li class="item">
-          <a href="javascript:void(0);" class="icon instagram" title="Instagram">
-            <svg viewBox="0 0 512 512"><path d="M256 109.3c47.8 0 53.4 0.2 72.3 1 17.4 0.8 26.9 3.7 33.2 6.2 8.4 3.2 14.3 7.1 20.6 13.4 6.3 6.3 10.1 12.2 13.4 20.6 2.5 6.3 5.4 15.8 6.2 33.2 0.9 18.9 1 24.5 1 72.3s-0.2 53.4-1 72.3c-0.8 17.4-3.7 26.9-6.2 33.2 -3.2 8.4-7.1 14.3-13.4 20.6 -6.3 6.3-12.2 10.1-20.6 13.4 -6.3 2.5-15.8 5.4-33.2 6.2 -18.9 0.9-24.5 1-72.3 1s-53.4-0.2-72.3-1c-17.4-0.8-26.9-3.7-33.2-6.2 -8.4-3.2-14.3-7.1-20.6-13.4 -6.3-6.3-10.1-12.2-13.4-20.6 -2.5-6.3-5.4-15.8-6.2-33.2 -0.9-18.9-1-24.5-1-72.3s0.2-53.4 1-72.3c0.8-17.4 3.7-26.9 6.2-33.2 3.2-8.4 7.1-14.3 13.4-20.6 6.3-6.3 12.2-10.1 20.6-13.4 6.3-2.5 15.8-5.4 33.2-6.2C202.6 109.5 208.2 109.3 256 109.3M256 77.1c-48.6 0-54.7 0.2-73.8 1.1 -19 0.9-32.1 3.9-43.4 8.3 -11.8 4.6-21.7 10.7-31.7 20.6 -9.9 9.9-16.1 19.9-20.6 31.7 -4.4 11.4-7.4 24.4-8.3 43.4 -0.9 19.1-1.1 25.2-1.1 73.8 0 48.6 0.2 54.7 1.1 73.8 0.9 19 3.9 32.1 8.3 43.4 4.6 11.8 10.7 21.7 20.6 31.7 9.9 9.9 19.9 16.1 31.7 20.6 11.4 4.4 24.4 7.4 43.4 8.3 19.1 0.9 25.2 1.1 73.8 1.1s54.7-0.2 73.8-1.1c19-0.9 32.1-3.9 43.4-8.3 11.8-4.6 21.7-10.7 31.7-20.6 9.9-9.9 16.1-19.9 20.6-31.7 4.4-11.4 7.4-24.4 8.3-43.4 0.9-19.1 1.1-25.2 1.1-73.8s-0.2-54.7-1.1-73.8c-0.9-19-3.9-32.1-8.3-43.4 -4.6-11.8-10.7-21.7-20.6-31.7 -9.9-9.9-19.9-16.1-31.7-20.6 -11.4-4.4-24.4-7.4-43.4-8.3C310.7 77.3 304.6 77.1 256 77.1L256 77.1z"/><path d="M256 164.1c-50.7 0-91.9 41.1-91.9 91.9s41.1 91.9 91.9 91.9 91.9-41.1 91.9-91.9S306.7 164.1 256 164.1zM256 315.6c-32.9 0-59.6-26.7-59.6-59.6s26.7-59.6 59.6-59.6 59.6 26.7 59.6 59.6S288.9 315.6 256 315.6z"/><circle cx="351.5" cy="160.5" r="21.5"/></svg>
-          </a>
-        </li>
-      </ul>
+        <ul >          
+          <li class="item">
+            <a href="javascript:void(0);" class="icon facebook" title="Facebook" alt=" Go to Our Facebook">
+              <svg viewBox="0 0 512 512"><path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"/></svg>
+            </a>
+          </li>
+          <li class="item">
+            <a href="javascript:void(0);" class="icon youtube" title="YouTube" alt="Go to Our YouTube">
+              <svg viewBox="0 0 512 512"><path d="M422.6 193.6c-5.3-45.3-23.3-51.6-59-54 -50.8-3.5-164.3-3.5-215.1 0 -35.7 2.4-53.7 8.7-59 54 -4 33.6-4 91.1 0 124.8 5.3 45.3 23.3 51.6 59 54 50.9 3.5 164.3 3.5 215.1 0 35.7-2.4 53.7-8.7 59-54C426.6 284.8 426.6 227.3 422.6 193.6zM222.2 303.4v-94.6l90.7 47.3L222.2 303.4z"/></svg>
+            </a>
+          </li>
+          <li class="item">
+            <a href="javascript:void(0);" class="icon instagram" title="Instagram" alt="Go to Our Instagram">
+              <svg viewBox="0 0 512 512"><path d="M256 109.3c47.8 0 53.4 0.2 72.3 1 17.4 0.8 26.9 3.7 33.2 6.2 8.4 3.2 14.3 7.1 20.6 13.4 6.3 6.3 10.1 12.2 13.4 20.6 2.5 6.3 5.4 15.8 6.2 33.2 0.9 18.9 1 24.5 1 72.3s-0.2 53.4-1 72.3c-0.8 17.4-3.7 26.9-6.2 33.2 -3.2 8.4-7.1 14.3-13.4 20.6 -6.3 6.3-12.2 10.1-20.6 13.4 -6.3 2.5-15.8 5.4-33.2 6.2 -18.9 0.9-24.5 1-72.3 1s-53.4-0.2-72.3-1c-17.4-0.8-26.9-3.7-33.2-6.2 -8.4-3.2-14.3-7.1-20.6-13.4 -6.3-6.3-10.1-12.2-13.4-20.6 -2.5-6.3-5.4-15.8-6.2-33.2 -0.9-18.9-1-24.5-1-72.3s0.2-53.4 1-72.3c0.8-17.4 3.7-26.9 6.2-33.2 3.2-8.4 7.1-14.3 13.4-20.6 6.3-6.3 12.2-10.1 20.6-13.4 6.3-2.5 15.8-5.4 33.2-6.2C202.6 109.5 208.2 109.3 256 109.3M256 77.1c-48.6 0-54.7 0.2-73.8 1.1 -19 0.9-32.1 3.9-43.4 8.3 -11.8 4.6-21.7 10.7-31.7 20.6 -9.9 9.9-16.1 19.9-20.6 31.7 -4.4 11.4-7.4 24.4-8.3 43.4 -0.9 19.1-1.1 25.2-1.1 73.8 0 48.6 0.2 54.7 1.1 73.8 0.9 19 3.9 32.1 8.3 43.4 4.6 11.8 10.7 21.7 20.6 31.7 9.9 9.9 19.9 16.1 31.7 20.6 11.4 4.4 24.4 7.4 43.4 8.3 19.1 0.9 25.2 1.1 73.8 1.1s54.7-0.2 73.8-1.1c19-0.9 32.1-3.9 43.4-8.3 11.8-4.6 21.7-10.7 31.7-20.6 9.9-9.9 16.1-19.9 20.6-31.7 4.4-11.4 7.4-24.4 8.3-43.4 0.9-19.1 1.1-25.2 1.1-73.8s-0.2-54.7-1.1-73.8c-0.9-19-3.9-32.1-8.3-43.4 -4.6-11.8-10.7-21.7-20.6-31.7 -9.9-9.9-19.9-16.1-31.7-20.6 -11.4-4.4-24.4-7.4-43.4-8.3C310.7 77.3 304.6 77.1 256 77.1L256 77.1z"/><path d="M256 164.1c-50.7 0-91.9 41.1-91.9 91.9s41.1 91.9 91.9 91.9 91.9-41.1 91.9-91.9S306.7 164.1 256 164.1zM256 315.6c-32.9 0-59.6-26.7-59.6-59.6s26.7-59.6 59.6-59.6 59.6 26.7 59.6 59.6S288.9 315.6 256 315.6z"/><circle cx="351.5" cy="160.5" r="21.5"/></svg>
+            </a>
+          </li>
+        </ul>        
+      </div>
+
       <div class="copyright">&copy; SmartWatch inc., 2018</div>
     </footer>
-  </div>  <!-- //wrap -->
+  </div><!-- //wrap -->   
+  
 
     <!-- <script src =""></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
